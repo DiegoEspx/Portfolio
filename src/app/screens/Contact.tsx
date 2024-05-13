@@ -1,40 +1,53 @@
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-const { t } = useTranslation();
+    const { t } = useTranslation();
 
-return (
-    <main className="flex items-center justify-center w-full h-full " >
-    <div className="max-w-screen-lg  flex items-center justify-center bg-blue-900 p-28 w-auto">
-        <p className="text-lg mb-2">Información de contacto:</p>
-        {/* Cuadro de información de contacto */}
-        <div className="flex justify-between mb-4 bg-blue-300">
-            <div>
-                    {/* Texto a la izquierda */}
-                <div className="w-1/2 pr-8">
-                    <p className="text-lg md:text-xl text-white mt-4 text-justify">
-                        {t('textOne')}
+    return (
+        <main className="flex items-center justify-center w-full h-full">
+        <img src="../../assets/icons/Contact.png" alt="" />
+        <div className="max-w-screen-lg w-full lg:px-24 flex flex-col items-center justify-center bg-blue-900 p-24 rounded-2xl shadow-xl">
+            {/* Título de la sección */}
+            <strong>
+                <p className=" md:text-3xl lg:text-4xl text-white mb-8">
+                    {t('contact')}  
+                </p>   
+            </strong>
+            
+            {/* Contenedor de información de contacto */}
+            <div className="w-full p-16 rounded-lg grid grid-cols-2 gap-16 text-justify "
+            style={{background:'#2A3F78'}}>
+                {/* Texto a la izquierda */}
+                <div className=' p-3'>
+                    <p className="text-lg md:text-xl lg:text-1xl text-white  ">
+                        {t('finalText')}
                     </p>
                 </div>
                 
-                <div className="w-1/2"> </div>
-                <ul className="list-disc pl-6">
-                    <li>d.alejo.guerrero.e@gmail.com</li>
-                    <li>+57 312-726-1552</li>
-                    <li>Colombia-Pasto-Nariño</li>
+                {/* Lista de información de contacto */}
+                <ul className='p-7' >
+                    <strong>
+                        <li className="text-white text-lg">d.alejo.guerrero.e@gmail.com</li>
+                        <li className="text-white text-lg mt-4">+57 312 - 726 - 1552</li>
+                        <li className="text-white text-lg mt-4">Colombia - Pasto - Nariño</li>
+                    </strong>
+                    
+                        {/* Botón de enviar mensaje */}
+                    <button className=" mt-4 text-white px-8 py-4 items-center justify-center flex rounded-3xl shadow-2xl"
+                    style={{background:'linear-gradient(180deg, #55E0FF 0%, #AD27FF 100%)'}}>
+                        <strong>
+                                Enviar Mensaje
+                        </strong>
+                        <img src="/enviar.png" alt="Enviar" />
+                    </button>
                 </ul>
+                
             </div>
-            {/* Botón de enviar mensaje */}
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-            >
-            Enviar mensaje
-            <img src="/enviar.png" alt="Enviar" className="w-8 h-8" />
-            </button>
+            
+            
         </div>
-    </div>
-    </main>
-);
-}
-
+        </main>
+    );
+};
 
 export default Contact;

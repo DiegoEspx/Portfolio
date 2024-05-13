@@ -35,7 +35,7 @@ const Navbar = () => {
             style={{
               background: 'linear-gradient(180deg, #86B8DB 50%, #C6B5EE 90%)',
               transition: 'transform 0.3s ease, color 0.3s ease',
-              transform: hoveredButton === item.id ? 'scale(1.4)' : 'scale(1.1)',
+              transform: hoveredButton === item.id ? 'scale(1.5)' : 'scale(1.1)',
               fontSize: '33px'
             }}
             onClick={() => handleNavClick(item.id)}
