@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 .text-gradient1 {
-    background: linear-gradient(90deg, #42EFDA 0%, #BE23E5 100%);
+    background: linear-gradient(90deg, #42EFDA 0%, #BE23E5 80%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -18,4 +18,16 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+@media (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas que 768px */
+    .flex-col {
+    flex-direction: column;
+    }
+    .mb-4 {
+      margin-bottom: 1rem; /* Ajustar el espacio entre los elementos de navegación */
+    }
+    .mr-4 {
+      margin-right: 1rem; /* Ajustar el espacio entre los elementos de navegación */
+    }
 }
