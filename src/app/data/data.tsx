@@ -37,7 +37,7 @@ export const dataNavbar = (navItem: number): NavbarType => ({
       icon: (
         <FiHome
           className={navItem === 1 ? 'text-ap' : ''}
-          style={{fontSize:'10px'}}
+          style={{fontSize:'35px'}}
         />
       ),
       to: '/',
