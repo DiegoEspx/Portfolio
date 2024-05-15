@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { FaGithub } from "react-icons/fa";
-import { SiLinkedin } from "react-icons/si";
+import { BsLinkedin } from 'react-icons/bs';
+import { BsGithub } from 'react-icons/bs';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -13,8 +13,8 @@ const Home = () => {
           <h1 className="text-2xl md:text-5xl text-gradient1 font-bold mb-5 mt-5 p-2">{t('home')}</h1>
           <p className="text-lg md:text-xl text-white leading-relaxed text-justify mb-20">{t('textOne')}</p>  
           <div className='flex gap-10'>
-            <a href="https://github.com/DiegoEspx" target="_blank" rel="noopener noreferrer"><FaGithub className='bg-black rounded-full text-white' style={{fontSize:'48px'}}/></a>
-            <a href="https://www.linkedin.com/in/diego-espa%C3%B1a-9b801a1ab/" target="_blank" rel="noopener noreferrer"><SiLinkedin className='bg-black text-white rounded-full' style={{fontSize:'48px'}}/></a>  
+            <a href="https://github.com/DiegoEspx" target="_blank" rel="noopener noreferrer"><BsGithub className='bg-black rounded-full text-white' style={{fontSize:'48px'}}/></a>
+            <a href="https://www.linkedin.com/in/diego-espa%C3%B1a-9b801a1ab/" target="_blank" rel="noopener noreferrer"><BsLinkedin className='bg-black text-white rounded-full' style={{fontSize:'48px'}}/></a>  
           </div>
         </div>
         {/* Imagen a la derecha */}
