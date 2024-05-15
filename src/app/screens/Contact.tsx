@@ -1,13 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import { LuSendHorizonal } from "react-icons/lu";
+import { MdMailOutline } from "react-icons/md";
+import { FiPhoneCall } from "react-icons/fi";
+import { TbMapPin } from "react-icons/tb";
 
 const Contact = () => {
     const { t } = useTranslation();
 
     return (
-        <main className="flex items-center justify-center w-full h-full">
-        <img src="../../assets/icons/Contact.png" alt="" />
-        <div className="max-w-screen-lg w-full lg:px-24 flex flex-col items-center justify-center fondoContact p-20 rounded-2xl shadow-xl">
+        <main className="flex items-center justify-center w-full h-full ">
+        <div className="max-w-screen-lg w-full lg:px-24 flex flex-col items-center justify-center fondoContact p-16 rounded-2xl shadow-xl ml-20   ">
             {/* Título de la sección */}
             <strong>
                 <p className=" md:text-3xl lg:text-5xl text-white mb-8">
@@ -28,9 +30,16 @@ const Contact = () => {
                 {/* Lista de información de contacto */}
                 <ul className="p-3 md:p-1 ml-10 mt-10 text-center ">
                     <strong>
-                        <li className="text-white text-lg md:text-xl lg:text-xl">d.alejo.guerrero.e@gmail.com</li>
-                        <li className="text-white text-lg md:text-xl lg:text-xl mt-4">+57 312 - 726 - 1552</li>
-                        <li className="text-white text-lg md:text-xl lg:text-xl mt-4">Colombia - Pasto - Nariño</li>
+                        <li className="text-white text-lg md:text-xl lg:text-xl flex items-center gap-3">
+                                <div>
+                                    <MdMailOutline style={{ fontSize: '28px' }} />
+                                </div>
+                                d.alejo.guerrero.e@gmail.com
+                        </li>
+                        <li className="text-white text-lg md:text-xl lg:text-xl mt-4 flex gap-3"><FiPhoneCall
+                        style={{ fontSize: '24px' }}/> +57 312 - 726 - 1552</li>
+                        <li className="text-white text-lg md:text-xl lg:text-xl mt-4 flex gap-3"><TbMapPin
+                        style={{ fontSize: '28px' }}/>Colombia - Pasto - Nariño</li>
                     </strong>
                     
                     {/* Botón de enviar mensaje */}
@@ -40,7 +49,6 @@ const Contact = () => {
                         </strong>
                         <LuSendHorizonal
                         style={{ fontSize: '26px' }}/>
-
                     </button>
                 </ul>
                 

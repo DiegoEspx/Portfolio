@@ -1,4 +1,4 @@
-import iconLogo from './../../assets/icons/logo.svg';
+
 import { FiHome } from "react-icons/fi";
 import { FaRegFolderClosed } from "react-icons/fa6";
 import { LuBrain } from "react-icons/lu";
@@ -28,7 +28,7 @@ type LanguageType = {
 export const dataNavbar = (navItem: number): NavbarType => ({
   logo: {
     title: 'Diego',
-    icon: iconLogo,
+    icon: '',
   },
   nav: [
     {

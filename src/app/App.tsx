@@ -15,7 +15,7 @@ function App() {
       <section className='flex-1 grid grid-rows-[auto_1fr_auto]'>
         <Header />
         <section style={{background:'linear-gradient(180deg, #00104A 28%, #445D88 100%)'}}>
-          <Routes>
+          <Routes>  
             <Route path='/' element={<Home />} />
             <Route path='/Sobre_mi' element={<About />} />
             <Route path='/Proyectos' element={<Projects />} />

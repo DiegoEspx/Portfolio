@@ -2,6 +2,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useTranslation } from 'react-i18next';
+import { FaLink } from "react-icons/fa6";
 
 const Projects = () => {
     const { t } = useTranslation();
@@ -14,7 +15,7 @@ const Projects = () => {
         },
         {
             title: 'Proyecto 2',
-            description: 'Descripción del proyecto 2...',
+            description:'Descripción del proyecto 2...',
             languages: ['Python', 'Django'],
             githubLink: 'url_del_repo_2',
         },
@@ -41,20 +42,21 @@ const Projects = () => {
                     <Slider {...settings}>
                         {projects.map((project, index) => (
                             <div key={index} className=" rounded-3xl overflow-hidden shadow-md">
-                                <div className="p-20 sm:w-full" style={{ background:'linear-gradient(180deg, #55E0FF 0%, #AD27FF 100%)' }}>
-                                    <h1 className="text-4xl font-bold mb-4 text-gradient3 text-white">
+                                <div className="p-16" style={{ background:'linear-gradient(180deg, #55E0FF 0%, #AD27FF 100%)' }}>
+                                    <h1 className="text-4xl font-extrabold mb-4 text-gradient3">
                                         {project.title}
                                     </h1>
                                     <p className="text-lg mb-4 text-white">{project.description}</p>
-                                    <div className="items-center mt-16 grid grid-cols-2 col-span-10 "> {/* Contenedor de los lenguajes */}
+                                    <div className="items-center mt-16 grid grid-cols-2 "> {/* Contenedor de los lenguajes */}
                                         <div> {/* Contenedor de los lenguajes */}
                                             {project.languages.map((language, index) => (
-                                                <span key={index} className="bg-purple-200 text-purple-800 px-3 py-1 rounded-md mr-2">{language}</span>
+                                                <span key={index} className="bg-purple-200 text-purple-800 px-3 py-2 rounded-lg mr-2">{language}</span>
                                             ))}
                                         </div>
-                                        <div className=' ml-52'> {/* Contenedor del botón de GitHub */}
-                                            <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="bg-purple-900 text-white px-4 py-2 rounded-md hover:bg-cyan-600 transition-colors duration-300">
-                                                <strong>GitHub</strong>
+                                        <div className=' ml-64'> {/* Contenedor del botón de GitHub */}
+                                            <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="  text-center  gap-3 flex bg-purple-900 text-white pl-4 py-3 rounded-full hover:bg-cyan-400 transition-colors duration-300 font-extrabold">
+                                                GitHub
+                                                <FaLink style={{ fontSize: '20px' }} className=' '/>
                                             </a>
                                         </div>
                                     </div>
