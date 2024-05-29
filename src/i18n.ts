@@ -23,6 +23,12 @@ resources: {
         proyectTitle: 'Mercedario Restaurant',
         textProjectOne: 'Code to add, edit, delete, calculate prices, for ingredients and recipes handled by the restaurant (inventory).'
         ,
+        //Skills
+        skills: 'My Skills',
+        frontText: 'My Frontend Skills:',
+        backText:'My Backend Skills:',
+        other:'Other Skills:',
+        botonOther:'Other',
         //Contact
         contact: 'CONTACT',
         finalText: "Thank you for taking the time to get here. If you think I can be of use to your team or if you simply have any questions, do not hesitate to contact me. I'm here to help you in any way I can."
@@ -42,6 +48,12 @@ resources: {
         proyect:'Mis Proyectos',
         proyectTitle:'Restaurante Mercedario',
         textProjectOne:'Codigo para agregar, editar, eliminar, calcular precios, para ingredientes y recetas que maneje el restaurante (inventario).',
+        //Skills
+        skills: 'Mis Habilidades',
+        frontText: 'Mis habilidades en Frontend:',
+        backText:'Mis habilidades en Backend:',
+        other:'Otras habilidades:',
+        botonOther:'Otros',
         //Contact
         contact: 'CONTACTO',
         finalText: 'Gracias por tomarte el tiempo de llegar hasta aquí. Si consideras que puedo ser de utilidad para tu equipo o si simplemente tienes alguna pregunta, no dudes en contactarme. Estoy aquí para ayudarte en todo lo que pueda.'

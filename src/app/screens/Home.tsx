@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <main className="flex flex-col md:max-w-screen lg:flex-row items-center justify-center w-full h-full">
-      <section className=" fondoHome md:flex-col max-w-screen-lg flex flex-col lg:flex-row items-center justify-center lg:p-20 mb-24 rounded-lg shadow-2xl">
+      <section className=" fondoHome md:flex-col max-w-screen-lg flex flex-col lg:flex-row items-center justify-center lg:p-16 mb-24 rounded-lg shadow-2xl">
         {/* Texto a la izquierda */}
         <div className="w-full md:w-1/2 md:pr-8 lg:pr-16 lg:mb-10">
           <h1 className="text-2xl md:text-5xl text-gradient1 font-bold mb-5 mt-5 p-2">{t('home')}</h1>

@@ -10,18 +10,18 @@ const Contact = () => {
     const { t } = useTranslation();
 
     return (
-        <main className="flex items-center justify-center w-full h-full p-4">
+        <main className="flex items-center justify-center w-full h-full">
             <div className="max-w-screen-lg w-full lg:px-24 flex flex-col items-center justify-center fondoContact p-8 rounded-2xl shadow-xl">
                 {/* Título de la sección */}
                 <strong>
-                    <p className="text-3xl md:text-4xl lg:text-5xl text-white mb-8 text-center">
+                    <p className="text-3xl md:text-4xl lg:text-5xl text-white mb-5 text-center">
                         {t('contact')}  
                     </p>   
                 </strong>
                 
                 {/* Contenedor de información de contacto */}
-                <div className="w-full p-6 md:p-14 rounded-lg flex flex-col gap-7" style={{background:'#2A3F78'}}>
-                    {/* Texto a la izquierda */}
+                <div className="w-full p-6  md:p-10 rounded-lg flex flex-col gap-7 max-sm:ml-6" style={{background:'#2A3F78'}}>
+                    
                     <div className="p-3">
                         <p className="text-lg md:text-xl lg:text-2xl text-white text-center">
                             {t('finalText')}

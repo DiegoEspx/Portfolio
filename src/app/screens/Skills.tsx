@@ -1,17 +1,18 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
-    // Estado para mantener el estado actual de la sección seleccionada
+    const { t } = useTranslation();
     const [selectedSection, setSelectedSection] = useState('frontend');
-
-    // Función para cambiar la sección seleccionada
     const handleSectionChange = (section:string) => {
         setSelectedSection(section);
     };
     return (
         <div className="flex flex-col items-center justify-center w-full h-full">
             <div className="max-w-screen-lg w-full fondoSkills p-20 rounded-xl shadow-md">
-                <h1 className="text-5xl font-bold mb-12 text-center text-white">Mis Habilidades</h1>
+                <h1 className="text-5xl font-bold mb-12 text-center text-white">
+                    {t('skills')}
+                </h1>
                 
                 {/* Selector de secciones */}
                 <div className="flex justify-center mb-14 ">
@@ -34,13 +35,13 @@ const Skills = () => {
                         className={`px-4 py-2 rounded-full focus:outline-none ${selectedSection === 'otros' ? 'bg-gradient text-white' : 'bg-gray-300'}`}
                         onClick={() => handleSectionChange('otros')}
                     >
-                        <strong>Otros</strong>
+                        <strong>{t('botonOther')}</strong>
                     </button>
                 </div>
                 {/* Contenido de la sección seleccionada */}
                 {selectedSection === 'frontend' && (
                     <div>
-                        <h2 className="text-xl font-bold mb-20 ml-16 text-white">Mis habilidades en Frontend:</h2>
+                        <h2 className="text-xl font-bold mb-20 ml-16 text-white">{t('frontText')}</h2>
                         <div className="flex flex-wrap mb-20 ml-16">
                             {/* Lista de habilidades en frontend */}
                             <span style={{background:'#a050b4'}} className=" text-white px-4 py-2 rounded-full mr-2 mb-2"><strong>HTML</strong></span>
@@ -51,7 +52,7 @@ const Skills = () => {
                 )}
                 {selectedSection === 'backend' && (
                     <div>
-                        <h2 className="text-xl font-bold mb-20   ml-16 text-white">Mis habilidades en Backend:</h2>
+                        <h2 className="text-xl font-bold mb-20   ml-16 text-white">{t('backText')}</h2>
                         <div className="flex flex-wrap mb-20 ml-16">
                             {/* Lista de habilidades en backend */}
                             <span style={{background:'#a050b4'}} className="text-white px-4 py-2 rounded-full mr-2 mb-2"><strong>Node.js</strong></span>
@@ -61,7 +62,7 @@ const Skills = () => {
                 )}
                 {selectedSection === 'otros' && (
                     <div>
-                        <h2 className="text-xl font-bold mb-20 ml-16 text-white">Otras habilidades:</h2>
+                        <h2 className="text-xl font-bold mb-20 ml-16 text-white">{t('other')}</h2>
                         <div className="flex flex-wrap mb-20 ml-16">
                             {/* Lista de otras habilidades */}
                             <span style={{background:'#a050b4'}} className=" text-white px-4 py-2 rounded-full mr-2 mb-2"><strong>Git</strong></span>
